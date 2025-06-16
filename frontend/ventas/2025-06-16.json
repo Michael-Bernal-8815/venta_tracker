@@ -19,5 +19,68 @@
         "unidades": 3,
         "metodo_pago": "tarjeta",
         "fecha": "2025-06-16"
+    },
+    {
+        "producto": "Samsung Galaxy S21",
+        "precio": 15000,
+        "unidades": 1,
+        "metodo_pago": "tarjeta",
+        "fecha": "2025-06-16"
+    },
+    {
+        "producto": "Samsung Galaxy S21",
+        "precio": 15000,
+        "unidades": 2,
+        "metodo_pago": "tarjeta",
+        "fecha": "2025-06-16"
+    },
+    {
+        "producto": "Motorola G73",
+        "precio": 6500,
+        "unidades": 1,
+        "metodo_pago": "tarjeta",
+        "fecha": "2025-06-16"
+    },
+    {
+        "producto": "Xiaomi Redmi Note 12",
+        "precio": 7000,
+        "unidades": 2,
+        "metodo_pago": "tarjeta",
+        "fecha": "2025-06-16"
+    },
+    {
+        "producto": "Samsung Galaxy S21",
+        "precio": 15000,
+        "unidades": 1,
+        "metodo_pago": "efectivo",
+        "fecha": "2025-06-16"
+    },
+    {
+        "producto": "Motorola G73",
+        "precio": 6500,
+        "unidades": 2,
+        "metodo_pago": "efectivo",
+        "fecha": "2025-06-16"
+    },
+    {
+        "producto": "Xiaomi Redmi Note 12",
+        "precio": 7000,
+        "unidades": 1,
+        "metodo_pago": "tarjeta",
+        "fecha": "2025-06-16"
+    },
+    {
+        "producto": "Samsung Galaxy S21",
+        "precio": 15000,
+        "unidades": 3,
+        "metodo_pago": "efectivo",
+        "fecha": "2025-06-16"
+    },
+    {
+        "producto": "iPhone 13",
+        "precio": 18000,
+        "unidades": 3,
+        "metodo_pago": "tarjeta",
+        "fecha": "2025-06-16"
     }
 ]
