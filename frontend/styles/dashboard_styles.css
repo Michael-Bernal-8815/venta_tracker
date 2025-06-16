@@ -1,0 +1,136 @@
+:root {
+    --background-color: #000000; /* Fondo del dashboard negro */
+    --text-color: #FFFFFF; /* Texto blanco */
+    --dark-text-color: #FFFFFF; /* Títulos en blanco */
+    --btn-primary-bg: #122134; /* Fondo del botón primario */
+    --btn-primary-hover-bg: #0F1A2B; /* Fondo del botón en hover */
+    --card-bg: #121212; /* Fondo de las tarjetas oscuro */
+    --card-bg-alt: #1A1A1A; /* Fondo más oscuro para el contenido */
+    --sidebar-bg: #1F1F1F; /* Fondo más oscuro para el sidebar */
+}
+
+body {
+    background: var(--background-color);
+    color: var(--text-color);
+    margin: 0;
+    font-family: 'Arial', sans-serif;
+}
+
+.container-custom {
+    background-color:rgb(253, 186, 194);
+    border-radius: 15px; /* Esquinas redondeadas */
+    padding: 40px !important;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+    width: 100%;
+    max-width: 100%; /* Se expande al 100% */
+    margin: 60px auto;
+    display: flex;
+    overflow-x: auto; /* Permite desplazamiento horizontal */
+    overflow-y: hidden; /* Asegura que no se desborde el contenido vertical */
+}
+
+.content-area {
+    flex-grow: 1; /* Ocupa el espacio restante */
+    padding: 20px;
+    background-color: var(--card-bg-alt); /* Fondo más oscuro para contenido */
+    border-radius: 10px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+    max-height: calc(100vh - 80px); /* Ajuste de altura para el header */
+    overflow-y: auto; /* Permite desplazamiento vertical */
+    overflow-x: hidden; /* No permite desplazamiento horizontal */
+    width: 100%;
+}
+
+h1, h2 {
+    color: var(--dark-text-color);
+    font-weight: 600;
+    margin-bottom: 20px;
+}
+
+p {
+    color: var(--text-color);
+    font-size: 1rem;
+    line-height: 1.6;
+}
+
+.nav {
+    width: 250px;
+    margin-right: 20px;
+    background-color: var(--sidebar-bg) !important; /* Fondo oscuro para el sidebar */
+    border-radius: 15px;
+    padding: 15px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+    transition: background-color 0.3s ease;
+    height: 100%;
+    position: sticky;
+    top: 0;
+}
+
+.nav-link {
+    padding: 10px;
+    color: var(--text-color);
+    text-decoration: none;
+    transition: background-color 0.3s, color 0.3s ease;
+    border-radius: 8px;
+}
+
+.nav-link:hover {
+    background-color: var(--dark-text-color);
+    color: black; /* Cambiar el texto a negro cuando está en hover */
+}
+
+/* Estilo para el enlace seleccionado (activo) */
+.nav-link.active {
+    background-color: var(--dark-text-color);
+    color: black; /* Cambiar el texto a negro cuando está activo */
+}
+
+/* Mejorar el aspecto del avatar de usuario */
+img.img-fluid.rounded-circle {
+    border: 3px solid #fff; /* Borde blanco alrededor del avatar */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+/* Botones */
+button, .btn {
+    background-color: var(--btn-primary-bg);
+    color: white;
+    border: none;
+    padding: 12px 20px;
+    border-radius: 30px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    transition: background-color 0.3s, transform 0.2s ease;
+}
+
+button:hover, .btn:hover {
+    background-color: var(--btn-primary-hover-bg);
+    transform: translateY(-2px);
+}
+
+button:focus, .btn:focus {
+    outline: none;
+    box-shadow: 0 0 0 3px rgba(0, 123, 255, 0.5);
+}
+
+/* Títulos e interactividad */
+h1, h2 {
+    color: var(--dark-text-color);
+}
+
+p {
+    color: var(--text-color);
+}
+
+/* Sección que contiene el contenido cargado de los paneles */
+.panel-contents {
+    color: black !important; /* Permite que los contenidos internos no hereden el color blanco global */
+}
+
+.panel-contents h2, .panel-contents p {
+    color: black !important; /* Evita que los títulos y párrafos dentro de los paneles se vean afectados por el color blanco global */
+}
+
+/* Si se cargan estilos específicos de los paneles (por ejemplo, el color de fondo de los h1 de los paneles) */
+.panel-contents h1 {
+    color: white !important; /* Esto garantiza que los h1 en los paneles se muestren con el color que tengan definidos los archivos cargados */
+}

@@ -1,0 +1,157 @@
+        :root {
+            --background-color: #F7EAE1;
+            --text-color: #26373E;
+            --dark-text-color: #172E34;
+            --btn-primary-bg: #122134;
+            --btn-primary-hover-bg: #0F1A2B;
+            --alert-bg: #FF4E5A;
+        }
+
+        body {
+            background-color: var(--background-color);
+            color: var(--text-color);
+        }
+
+        .vh-100 {
+            align-content: center;
+        }
+
+        .container-custom {
+            background-color: white;
+            border-radius: 10px;
+            padding: 20px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+            max-width: 800px; /* Ancho máximo */
+            margin: auto; /* Centrar horizontalmente */
+            display: flex;
+            flex-direction: row; /* Alinear en fila */
+            justify-content: center; /* Centrar contenido */
+        }
+
+        .divider {
+            display: flex;
+            align-items: center;
+            margin: 20px 0; /* Espaciado vertical */
+        }
+
+        .Google-Icon{
+            width: 24px;
+            height: 24px;
+            margin-right: 5px;
+            margin: 5px 0;
+        }
+
+        .divider:before,
+        .divider:after {
+            content: "";
+            flex: 1;
+            height: 1px;
+            background: #eee; /* Color de la línea */
+        }
+
+        .divider p {
+            margin: 0 10px; /* Espaciado horizontal */
+            font-weight: bold;
+        }
+
+        .h-custom {
+            height: calc(100% - 73px);
+        }
+
+        @media (max-width: 450px) {
+            .h-custom {
+                height: 100%;
+            }
+        }
+
+        .btn-social {
+            transition: transform 0.2s;
+        }
+
+        .btn-social:hover {
+            transform: scale(1.1);
+        }
+
+        .btn-primary {
+            background-color: var(--btn-primary-bg);
+            border: none;
+        }
+
+        .btn-primary:hover {
+            background-color: var(--btn-primary-hover-bg);
+        }
+
+        .header {
+            background-color: var(--dark-text-color);
+        }
+
+        .image-container, .form-container {
+            flex: 1; /* Ocupa el mismo espacio */
+            max-width: 500px; /* Ancho máximo para columnas */
+        }
+
+        .image-container img {
+            max-width: 100%; /* Ajusta imagen a su contenedor */
+            height: auto; /* Mantener proporciones */
+        }
+
+        @media (max-width: 768px) {
+            .container-custom {
+                flex-direction: column; /* Apilar en móvil */
+            }
+
+            .image-container, .form-container {
+                max-width: 100%; /* Ancho completo en móvil */
+            }
+        }
+
+        @media (min-width: 992px) {
+           .justify-content-lg-start {
+            -ms-flex-pack: start !important;
+            justify-content: center !important;
+            }
+        }
+
+
+        .btn-social {
+            display: flex;
+            align-items: center;
+            padding: 10px 10px;
+            border-radius: 5px; /* Esquinas redondeadas */
+            font-weight: bold;
+            color: white; /* Color del texto */
+        }
+        
+        .btn-google {
+            background-color: white;
+            color: #4285F4; /* Color del texto Google */
+            border: 1px solid #ccc; /* Borde ligero */
+        }
+        
+        .btn-google:hover {
+            background-color: #f1f1f1; /* Color de fondo al pasar el mouse */
+        }
+        
+        .btn-facebook {
+            background-color: #3b5998; /* Azul de Facebook */
+        }
+        
+        .btn-facebook:hover {
+            background-color: #2d4373; /* Color más oscuro al pasar el mouse */
+        }
+        
+        .btn-twitter {
+            background-color: #1DA1F2; /* Azul de Twitter */
+        }
+        
+        .btn-twitter:hover {
+            background-color: #1a91da; /* Color más oscuro al pasar el mouse */
+        }
+        
+        .social-icon2 {
+            display: block;
+            margin: 0 auto;
+            width: 24px; /* Ajusta según el tamaño deseado */
+            height: auto; /* Mantiene la relación de aspecto */
+        }
+        

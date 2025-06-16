@@ -1,0 +1,9 @@
+[
+    {
+        "producto": "Samsung Galaxy S21",
+        "precio": 15000,
+        "unidades": 1,
+        "metodo_pago": "efectivo",
+        "fecha": "2025-06-16"
+    }
+]

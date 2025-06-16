@@ -1,0 +1,74 @@
+:root {
+    --background-color: #F7F7F7; /* Color de fondo claro */
+    --text-color: #333; /* Color del texto principal */
+    --header-bg: #122134; /* Color de fondo para encabezados */
+    --button-primary-bg: #007bff; /* Color del botón primario */
+    --button-secondary-bg: #6c757d; /* Color del botón secundario */
+    --button-hover-opacity: 0.9; /* Opacidad al pasar el ratón */
+    --border-color: #ddd; /* Color de los bordes */
+}
+
+body {
+    background-color: var(--background-color);
+    font-family: Arial, sans-serif; /* Fuente más formal */
+}
+
+.container {
+    background-color: white;
+    border-radius: 10px;
+    padding: 20px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    margin-top: 20px;
+}
+
+h1 {
+    color: var(--header-bg);
+    border-bottom: 2px solid var(--header-bg);
+    padding-bottom: 10px;
+    margin-bottom: 20px;
+}
+
+h5 {
+    color: var(--header-bg); /* Color para subtítulos */
+    margin-top: 10px;
+}
+
+p {
+    color: var(--text-color);
+    line-height: 1.5; /* Mejora la legibilidad */
+}
+
+.row {
+    margin-bottom: 20px; /* Espaciado entre filas */
+}
+
+.btn {
+    margin-top: 10px;
+    padding: 10px 20px;
+    transition: opacity 0.3s; /* Suave transición en hover */
+}
+
+.btn-primary {
+    background-color: var(--button-primary-bg);
+    border: none;
+}
+
+.btn-secondary {
+    background-color: var(--button-secondary-bg);
+    border: none;
+}
+
+.btn:hover {
+    opacity: var(--button-hover-opacity); /* Efecto de hover */
+}
+
+img {
+    max-width: 100%; /* Asegura que las imágenes no se desborden */
+    height: auto; /* Mantiene la proporción de la imagen */
+}
+
+/* Estilo para la línea horizontal */
+hr {
+    border: 1px solid var(--border-color);
+    margin: 20px 0; /* Espaciado alrededor de la línea */
+}
