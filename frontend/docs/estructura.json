@@ -1,0 +1,9 @@
+[
+    {
+        "producto": "Producto",
+        "precio": 100,
+        "unidades": 1,
+        "metodo_pago": "Efectivo/Tarjeta",
+        "fecha": "2025-06-16"
+    }
+]

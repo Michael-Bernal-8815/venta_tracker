@@ -56,7 +56,7 @@ p {
 .nav {
     width: 250px;
     margin-right: 20px;
-    background-color: var(--sidebar-bg); /* Fondo oscuro para el sidebar */
+    background-color: var(--sidebar-bg) !important; /* Fondo oscuro para el sidebar */
     border-radius: 15px;
     padding: 15px;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
