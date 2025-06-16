@@ -1,0 +1,313 @@
+
+@import url('../styles/fonts.css');
+
+:root {
+    --background-dark: #333;
+    --text-light: #fff;
+    --text-dark: #bbb;
+}
+
+header {
+    background-color: #000;
+    color: var(--text-light);
+    display: flex;
+    flex-direction: column;
+    padding: 10px 20px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+    width: 100%;
+    height: 100%;
+    box-sizing: border-box;
+    position: relative; /* Fija el header en la parte superior */
+    white-space: nowrap;
+}
+
+.header-container {
+    display: flex;
+    align-items: center; /* Alineación vertical */
+    justify-content: space-between; /* Espacio entre logo y otros elementos */
+    width: 100%;
+    height: 70px;
+    position: fixed; /* Fija el header en la parte superior */
+    top: 0; /* Alinea el header a la parte superior */
+    left: 0; /* Alinea el header a la izquierda */
+    background-color: black; /* Fondo blanco (ajusta según sea necesario) */
+    z-index: 1000; /* Asegúrate de que esté por encima de otros elementos */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Sombra para mayor visibilidad */
+}
+
+
+.logo {
+    display: flex;
+    align-items: center;
+    flex: 1;
+    max-width: 100%;
+    justify-content: flex-start !important; /*what*/
+    margin-left: 10px;
+}
+
+.logo img {
+    height: auto; 
+    max-height: 50px; /* Limita la altura máxima del logo */
+    margin-right: 5px; /* Margen */
+}
+
+.logo-container {
+    display: flex; /* Si la necesitas, pero aquí no es necesaria */
+    padding: 5px 0; /* Esto puedes mantener o ajustar según sea necesario */
+}
+
+.logo a:hover{
+    text-decoration: none;
+}
+
+nav {
+    font-family: 'Lato';
+    display: flex;
+    align-items: center;
+}
+
+.navigation {
+    display: flex;
+    align-items: center;
+}
+
+nav a {
+    color: var(--text-light);
+    text-decoration: none;
+    margin: 0 15px;
+    white-space: nowrap;
+    display: inline;
+}
+
+nav a:hover{
+    color: #ffffff;
+}
+
+.action-buttons {
+    display: flex;
+    align-items: center;
+    margin-right: 10px;
+}
+
+/* Estilo de los botones*/
+.btn-ingresar, .btn-descargar {
+  display: inline-block; /* Tamaño del botón */
+  padding: 6px 12px; /* Tamaño del botón (alargado) */
+  border: 2px solid white; 
+  border-radius: 25px; 
+  background-color: black; 
+  color: white; 
+  text-align: center; 
+  font-size: 16px; 
+  text-decoration: none; 
+  cursor: pointer; /* Cambia el cursor a mano cuando se pasa sobre el botón */
+  transition: background-color 0.3s, border-color 0.3s, transform 0.2s;
+}
+
+.btn-ingresar:hover, .btn-descargar:hover {
+  background-color: #333; /* Color de fondo al pasar el cursor (puedes ajustar este valor) */
+  border-color: #ccc; /* Color del borde al pasar el cursor (puedes ajustar este valor) */
+  transform: scale(1.05);
+}
+
+.search-container {
+    font-family: 'Lato';
+    display: flex;
+    align-items: center;
+    background-color: black;
+    padding: 5px 10px;
+    border-radius: 25px;
+    transition: width 0.4s ease;
+    position: relative;
+}
+
+.search-input {
+    width: 0;
+    opacity: 0;
+    transition: width 0.3s ease, opacity 0.3s ease;
+    border: none;
+    padding: 3px;
+    box-sizing: border-box;
+    background: transparent;
+    color: white;
+}
+
+.search-container.active .search-input {
+    width: 200px;
+    opacity: 1;
+}
+
+.search-icon,
+.close-icon {
+    cursor: pointer;
+    margin-left: 5px;
+    transition: transform 0.3s ease;
+}
+
+.close-icon {
+    display: none;
+    font-size: 18px;
+}
+
+.search-container.active .close-icon {
+    display: inline;
+}
+
+.search-container.active .search-icon {
+    display: none;
+}
+
+.lupa_s {
+    height: 40px;
+    transition: transform 0.3s ease;
+}
+
+.world_le {
+    height: 40px;
+}
+
+/* Ajustes para el contenedor de búsqueda activo */
+.search-container.active .lupa_s {
+    transform: translateX(-200px);
+}
+
+/* Botón del menú en móvil */
+.menu-toggle {
+    display: none;
+    cursor: pointer;
+    position: absolute;
+    right: 20px;
+    top: 10px;
+}
+
+/* Estilos del menú móvil */
+.mobile-menu {
+    display: none;
+    position: absolute;
+    top: 70px;
+    left: 0;
+    width: 100%;
+    background-color: #000;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+    z-index: 1000;
+    max-height: 0; /* Inicia con max-height 0 */
+    overflow: hidden; /* Oculta el contenido */
+    transition: max-height 0.4s ease; /* Añade transición */
+}
+
+.mobile-menu.active {
+    display: block; /* Mantén el display block para que se vea */
+    max-height: 500px; /* Ajusta según el contenido máximo esperado */
+}
+
+.mobile-navigation {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 10px 0;
+}
+
+.mobile-navigation a {
+    color: var(--text-light);
+    text-decoration: none;
+    margin: 10px 0;
+}
+
+/* Por problemas con la barra de busqueda.*/
+@media (max-width: 1192px) {
+    .navigation a {
+        display: inline;
+    }
+}
+
+/* Ajustes responsivos */
+@media (max-width: 1050px) {
+
+    .header-container {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .navigation {
+        display: none;
+    }
+
+    .logo {
+        flex: none;
+        display: flex;
+        align-items: center;
+        flex: 1;
+        max-width: 100%;
+        justify-content: flex-start;
+    }
+
+    .action-buttons {
+        display: none;
+    }
+
+    .menu-toggle {
+        display: block;
+    }
+    
+    .mobile-menu.active{
+    position: fixed; /* Fija el header en la parte superior */
+    top: 70px; /* Dar espacio para mostrar el header */
+    left: 0; 
+    background-color: black; 
+    z-index: 1000; /* Encima de otros elementos */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    transition: max-height 0.4s ease; /* Añade transición */
+    }
+
+    .menu-toggle {
+        display: block; /* Esto permite el menú en móvil */
+    }
+
+    .mobile-menu.active {
+        position: fixed;
+        top: 70px; /* Asegúrate de que esto no interfiera con la búsqueda */
+        left: 0;
+        background-color: black;
+        z-index: 1000;
+        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        transition: max-height 0.4s ease;
+    }
+
+    /* Asegúrate de que .search-container se muestre adecuadamente en móvil */
+    .search-container {
+        display: flex; /* Debe estar siempre visible */
+        align-items: center;
+    }
+
+    .search-container {
+        font-family: 'Lato';
+        display: flex;
+        align-items: center;
+        background-color: black;
+        padding: 5px 10px;
+        border-radius: 25px;
+        transition: width 0.4s ease;
+        position: relative;
+    }
+    
+    .search-input {
+        width: 0;
+        opacity: 0;
+        transition: width 0.3s ease, opacity 0.3s ease;
+        border: none;
+        padding: 3px;
+        box-sizing: border-box;
+        background: transparent;
+        color: white;
+    }
+    
+    .search-container.active .search-input {
+        width: 200px;
+        opacity: 1;
+    }
+    /* Ajustes para el contenedor de búsqueda activo */
+    .search-container.active .lupa_s {
+    transform: translateX(-200px);
+}
+
+}
