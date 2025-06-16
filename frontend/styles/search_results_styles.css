@@ -1,0 +1,23 @@
+/* Importar fonts. (Borel, Lato y Montserrat) */
+@import url('../styles/fonts.css');
+
+/* Variables de color */
+:root {
+    --background-color: #F7EAE1;
+    --text-color: #26373E;
+    --dark-text-color: #172E34;
+    --btn-primary-bg: #122134;
+    --btn-primary-hover-bg: #0F1A2B;
+    --btn-secondary-bg: #FF4E5A;
+    --btn-secondary-hover-bg: #cf434c;
+    --alert-bg: #FF4E5A;
+}
+
+/* Fondo de la página */
+body {
+    background-color: var(--background-color);
+    color: var(--text-color);
+    font-family: 'Lato', 'Montserrat'; /* Fuente principal para el texto general */
+    margin: 0;
+    padding: 0;
+}

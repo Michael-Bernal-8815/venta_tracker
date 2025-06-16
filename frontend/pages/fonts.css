@@ -1,0 +1,22 @@
+
+/* Borel local */
+@font-face {
+    font-family: 'Borel';
+    src: url('../assets/fonts/Borel.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Lato';
+    src: url('../assets/fonts/Lato-Regular.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Montserrat';
+    src: url('../assets/fonts/Montserrat-Regular.otf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
